@@ -10,3 +10,7 @@ type Query {
   getTasks: [Task]
   getTask(id: String): Task
 }
+
+type Mutation {
+  addTask(username: String!, text: String!): Task
+}

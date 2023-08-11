@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useStore } from '../store';
 
 function Form() {
-  const { setGlobalState } = useStore();
   const [formData, setFormData] = useState({
     taskText: '',
     username: ''
@@ -20,17 +18,6 @@ function Form() {
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    setGlobalState(oldState => ({
-      ...oldState,
-      tasks: [
-        ...oldState.tasks,
-        {
-          text: formData.taskText,
-          username: formData.username,
-        }
-      ]
-    }));
 
     setFormData({
       taskText: '',

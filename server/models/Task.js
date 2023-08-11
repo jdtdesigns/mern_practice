@@ -15,4 +15,19 @@ const taskSchema = new Schema({
 
 const Task = model('Task', taskSchema);
 
+// Task.deleteMany({})
+//   .then(() => console.log('tasks deleted'))
+//   .then(() => {
+//     Task.insertMany([
+//       {
+//         text: 'Task one',
+//         username: 'JD'
+//       },
+//       {
+//         text: 'Task two',
+//         username: 'Bob'
+//       }
+//     ]).then(() => console.log('tasks seeded'));
+//   });
+
 module.exports = Task;

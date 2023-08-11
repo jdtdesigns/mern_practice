@@ -12,5 +12,13 @@ module.exports = {
 
       return task;
     }
+  },
+
+  Mutation: {
+    async addTask(_, args) {
+      const task = await Task.create(args);
+
+      return task;
+    }
   }
 }

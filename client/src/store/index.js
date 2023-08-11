@@ -4,7 +4,6 @@ const StoreContext = createContext();
 
 export function StoreProvider(props) {
   const [globalState, setGlobalState] = useState({
-    tasks: [],
     loading: true,
     title: 'Some example title'
   });
