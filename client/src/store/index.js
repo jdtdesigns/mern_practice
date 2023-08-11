@@ -6,7 +6,6 @@ export function StoreProvider(props) {
   const [globalState, setGlobalState] = useState({
     tasks: [],
     loading: true,
-    darkMode: false,
     title: 'Some example title'
   });
 
