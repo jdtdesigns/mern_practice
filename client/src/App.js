@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import { useStore } from './store';
 
 import Landing from './pages/Landing';
@@ -9,8 +10,13 @@ function App() {
 
   return (
     <main className={darkMode ? 'dark' : ''} >
-      <Landing />
-      <Form />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+
+
+
     </main>
   );
 }

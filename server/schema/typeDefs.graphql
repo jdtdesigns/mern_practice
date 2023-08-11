@@ -7,6 +7,6 @@ type Task {
 }
 
 type Query {
-  sayHello: String
   getTasks: [Task]
+  getTask(id: String): Task
 }
